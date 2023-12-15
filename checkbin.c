@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _verifypath - check if the path has a collon  at the begining
  *@pth: searches for executable
@@ -96,7 +95,6 @@ char *_getpath(char **mm)
  * @mm: copy of env
  * Return: 0.
  */
-
 char **checkbin(char **bb, char **mm)
 {
 	unsigned int ii = 0, jj = 0, kk = 0;
