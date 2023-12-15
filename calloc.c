@@ -8,22 +8,22 @@
  */
 void *_calloc(unsigned int memb, unsigned int sz)
 {
-	void *pp = NULL;
-	unsigned int ii;
+	void *p = NULL;
+	unsigned int i;
 
 	if (memb == 0 || sz == 0)
 	{
 		return (NULL);
 	}
-	pp = malloc(memb * sz);
-	if (pp == NULL)
+	p = malloc(memb * sz);
+	if (p == NULL)
 	{
 		return (NULL);
 	}
-	for (ii = 0; ii < (memb * sz); ii++)
+	for (i = 0; i < (memb * sz); i++)
 	{
-		*((char *)(pp) + ii) = 0;
+		*((char *)(p) + i) = 0;
 	}
-	return (pp);
+	return (p);
 }
 

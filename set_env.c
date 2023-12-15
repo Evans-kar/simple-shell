@@ -98,7 +98,7 @@ void _setenv(char **iu, char ***env, int *en, int lp, char *ag[])
  * _setenvcreat - function to add or modify the env string
  * @env: the copy of the  env
  * @en: number of elements in em
- * @AAentirenv: concatenate arguments
+ * @Aentirenv: concatenate arguments
  */
 void _setenvcreat(char ***env, int *en, char *Aentirenv)
 {

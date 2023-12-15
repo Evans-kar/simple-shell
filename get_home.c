@@ -2,7 +2,7 @@
 
 /**
  * _gethome -  gets envenviroment HOME
- * @mm: copy of env variables
+ * @m: copy of env variables
  *Return: string inside  HOME env variable
  */
 char *_gethome(char **m)

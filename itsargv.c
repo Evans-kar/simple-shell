@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
  * _yesargv - shell form without filename at input
- * @aargv: args found from in the input
- * @eenvp: env variables in shell
+ * @argv: args found from in the input
+ * @envp: env variables in shell
  */
 void _yesargv(char *argv[], char *envp[])
 {

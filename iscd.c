@@ -2,13 +2,13 @@
 #define BUF_SIZE 2048
 /**
  * _iscd - findsif the file is cd inbuld
- * @pp: array of pointers and input of users
- * @lloop: loops and counts
- * @vv: arguments in the input
+ * @p: array of pointers and input of users
+ * @loop: loops and counts
+ * @v: arguments in the input
  * @env: copy of  env variables
  * Return: -1  0 and if exist cd in args[0]
  */
-int _iscd(char **p, int lloop, char *v[], char **env)
+int _iscd(char **p, int loop, char *v[], char **env)
 {
 	char str[] = "cd";
 	int i = 0, cont = 0, valor = -1;
@@ -27,7 +27,7 @@ int _iscd(char **p, int lloop, char *v[], char **env)
 
 	if (cont == 3)
 	{
-		_cd(p, lloop, v, env);
+		_cd(p, loop, v, env);
 		valor = 0;
 	}
 	else if (cont == 2)
@@ -40,7 +40,7 @@ int _iscd(char **p, int lloop, char *v[], char **env)
 
 /**
  * _cleancd - cleans the buffer
- * @cc: pointer to buffer
+ * @c: pointer to buffer
  * Return: -1  0 and  cd in args[0]
  */
 void _cleancd(char *c)
@@ -53,30 +53,30 @@ void _cleancd(char *c)
 
 /**
  * _fullcd - fill buffer to be pointed
- * @ff: pointer to buffer to be pointed
- * @aaux: pointer to aux in the buffer
+ * @f: pointer to buffer to be pointed
+ * @aux: pointer to aux in the buffer
  * Return: -1 , 0 and cd if its in args[0]
  */
 void _fullcd(char *f, char *aux)
 {
 	int w;
 
-	for (w = 0; aux[w]!='\0'; w++)
+	for (w = 0; aux[w] != '\0'; w++)
 		f[w] = aux[w];
 	for (; w < BUF_SIZE; w++)
-		f[w]= 0;
+		f[w] = 0;
 }
 /**
  * _cd - Changes the  directory
- * @aa: input of user
- * @lloop: counts the loops
- * @vv: args in the  input
+ * @a: input of user
+ * @loop: counts the loops
+ * @v: args in the  input
  * @env: copy of env vars
  * Return:-1 and 0 if success
  */
-void _cd(char **a, int lloop, char *v[], char **env)
+void _cd(char **a, int loop, char *v[], char **env)
 {
-	int valor = 0, z= 0;
+	int valor = 0, z = 0;
 	static char buf[BUF_SIZE];
 	static int w = 1;
 	char *home, aux[BUF_SIZE] = {0};

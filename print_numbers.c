@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * print_number - Prints numbers
- * @nn: Print parameters
+ * @n: Print parameters
  * Return: null
  */
 void print_number(int n)

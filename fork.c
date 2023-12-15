@@ -14,19 +14,19 @@ int currentstatus(int *stat)
 }
 /**
  * _frk - Creates a process and runs it
- * @pp: Pointer array
- * @ll: User input
- * @aa: Pointer number
- * @LL: Number of loops
- * @vv: Loop ags
- * @ee: Length of environment var
- * @mm: Env copy
- * @ff: input
+ * @p: Pointer array
+ * @l: User input
+ * @a: Pointer number
+ * @L: Number of loops
+ * @v: Loop ags
+ * @e: Length of environment var
+ * @m: Env copy
+ * @f: input
  * Return: Null.
  */
 
-void _frk(char **pp, char *ll, int aa,
-		int LL, char **vv, int ee, char **mm, char *ff)
+void _frk(char **p, char *l, int a,
+		int L, char **v, int e, char **m, char *f)
 {
 	pid_t child_pid;
 	int ty = 0, status, exist, execute;
@@ -39,23 +39,23 @@ void _frk(char **pp, char *ll, int aa,
 	}
 	if (child_pid == 0)
 	{
-		if (execve(pp[0], pp, mm) == -1)
+		if (execve(p[0], p, m) == -1)
 		{
-			exist = access((const char *) pp[0], F_OK);
-			execute = access((const char *) pp[0], X_OK);
+			exist = access((const char *) p[0], F_OK);
+			execute = access((const char *) p[0], X_OK);
 			if (exist == 0 && execute == -1)
 			{
-				_put_err(pp, LL, 4, vv);
-				free(ff), free(ll);
-				free_grid(pp, aa), free_grid(mm, ee);
+				_put_err(p, L, 4, v);
+				free(f), free(l);
+				free_grid(p, a), free_grid(m, e);
 				exit(126);
 			}
 			else
 			{
-				_put_err(pp, LL, 3, vv);
+				_put_err(p, L, 3, v);
 			}
-			free(ff), free(ll);
-			free_grid(pp, aa), free_grid(mm, ee);
+			free(f), free(l);
+			free_grid(p, a), free_grid(m, e);
 			exit(127);
 		}
 	}
