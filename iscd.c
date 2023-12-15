@@ -32,7 +32,7 @@ int _iscd(char **p, int loop, char *v[], char **env)
 	}
 	else if (cont == 2)
 	{
-		_put_err(p, lloop, 3, v);
+		_put_err(p, loop, 3, v);
 		valor = 0;
 	}
 	return (valor);
@@ -115,6 +115,6 @@ void _cd(char **a, int loop, char *v[], char **env)
 		_updatepwd(a[1], env);
 	}
 	if (valor == -1)
-		_put_err(a, lloop, 1, v);
+		_put_err(a, loop, 1, v);
 }
 
